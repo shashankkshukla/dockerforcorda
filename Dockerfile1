@@ -1,4 +1,4 @@
-FROM tomorrow/corda:latest
+FROM <>
 
 ADD build/cordapps/*.jar /opt/corda/cordapps/
 

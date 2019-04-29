@@ -1,0 +1,16 @@
+version: "2.0"
+services:
+  NationalRegulator:
+    image: corda/corda-zulu-4.0:latest
+    ports:
+      - "10600:10013"
+      - "10601:10014"
+      - "10602:10015"
+    volumes:
+      - /home/niit/Handcraft/observable-states/conf/partyd/config:/etc/corda
+      - /home/niit/Handcraft/observable-states/conf/partyd/certificates:/opt/corda/certificates
+      - /home/niit/Handcraft/observable-states/conf/partyd/persistence:/opt/corda/persistence
+      - /home/niit/Handcraft/observable-states/conf/partyd/logs:/opt/corda/logs
+      - /home/niit/Handcraft/observable-states/conf/partyd/cordapps:/opt/corda/cordapps
+      - /home/niit/Handcraft/observable-states/conf/partyd/additional-node-infos:/opt/corda/additional-node-infos
+      - /home/niit/Handcraft/observable-states/conf/partyd/network-parameters:/opt/corda/network-parameters

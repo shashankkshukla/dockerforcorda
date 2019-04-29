@@ -1,0 +1,17 @@
+version: "2.0"
+services:
+  Seller:
+    image: corda/corda-zulu-4.0:latest
+    ports:
+      - "10300:10004"
+      - "10301:10005"
+      - "10302:10006"
+    volumes:
+      - /home/niit/Handcraft/observable-states/conf/partya/config:/etc/corda
+      - /home/niit/Handcraft/observable-states/conf/partya/certificates:/opt/corda/certificates
+      - /home/niit/Handcraft/observable-states/conf/partya/persistence:/opt/corda/persistence
+      - /home/niit/Handcraft/observable-states/conf/partya/logs:/opt/corda/logs
+      - /home/niit/Handcraft/observable-states/conf/partya/cordapps:/opt/corda/cordapps
+      - /home/niit/Handcraft/observable-states/conf/partya/additional-node-infos:/opt/corda/additional-node-infos
+      - /home/niit/Handcraft/observable-states/conf/partya/network-parameters:/opt/corda/network-parameters
+

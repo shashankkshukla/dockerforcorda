@@ -1,0 +1,17 @@
+version: "2.0"
+services:
+  Notary:
+    image: corda/corda-zulu-4.0:latest
+    ports:
+      - "10200:10001"
+      - "10201:10002"
+      - "10202:10003"
+    volumes:
+      - /home/niit/Handcraft/observable-states/conf/notary/config:/etc/corda
+      - /home/niit/Handcraft/observable-states/conf/notary/certificates:/opt/corda/certificates
+      - /home/niit/Handcraft/observable-states/conf/notary/persistence:/opt/corda/persistence
+      - /home/niit/Handcraft/observable-states/conf/notary/logs:/opt/corda/logs
+      - /home/niit/Handcraft/observable-states/conf/notary/cordapps:/opt/corda/cordapps
+      - /home/niit/Handcraft/observable-states/conf/notary/additional-node-infos:/opt/corda/additional-node-infos
+      - /home/niit/Handcraft/observable-states/conf/notary/network-parameters:/opt/corda/network-parameters
+
